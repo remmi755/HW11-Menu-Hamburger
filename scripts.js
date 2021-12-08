@@ -38,14 +38,14 @@ const MAYO = {
     calories : 5
 }
 
-function Hamburger(size) {
-    this.price = size.price;
-    this.calories = size.calories;
+function Hamburger(name) {
+    this.price = name.price;
+    this.calories = name.calories;
     this.adds = []
 
-    this.addModifier = function(size) {
-        if ( size === CHEESE || size === POTATO || size === FLAVOR || size === CHEESE || size === MAYO ) {
-            return   this.adds.push(size)
+    this.addModifier = function(name) {
+        if ( name === CHEESE || name === POTATO || name === FLAVOR || name === CHEESE || name === MAYO ) {
+            return   this.adds.push(name)
         }
     }
 
@@ -54,7 +54,7 @@ function Hamburger(size) {
         for (let i = 0; i < this.adds.length; i++) {
             sum += this.adds[i].price
         }
-        return sum + size.price
+        return sum + name.price
     }
 
     this.getCalories = function() {
@@ -62,7 +62,7 @@ function Hamburger(size) {
         for (let i = 0; i < this.adds.length; i++) {
             sum += this.adds[i].calories
         }
-        return sum + size.calories
+        return sum + name.calories
     }
 }
 
