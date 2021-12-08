@@ -45,7 +45,7 @@ function Hamburger(name) {
 
     this.addModifier = function(name) {
         if ( name === CHEESE || name === POTATO || name === FLAVOR || name === CHEESE || name === MAYO ) {
-            return   this.adds.push(name)
+            this.adds.push(name)
         }
     }
 
